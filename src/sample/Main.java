@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
@@ -28,25 +30,27 @@ public class Main extends Application {
     }
     {
        Vikings vikings = new Vikings();
-       Question[] questions = new Question[vikings.getQuestionNumber()];
 
         Scanner in = new Scanner(System.in);
-        for(int i = 0; i < questions.length; i++)
+
+        ArrayList<Question> qs = new ArrayList<Question>();
+        for(int i = 0; i < 2; i++)
         {
-            String a = ""; String b = ""; String q = "";
+            int a = -1; int b = -1; String q = "";
             System.out.println("Question: ");
             q = in.next();
             System.out.println("Answer1: ");
-            a = in.next();
+            a = in.nextInt();
             System.out.println("Answer2: ");
-            b = in.next();
-            questions[i] = new Question();
-            questions[i].SetAnswer(q,a,b);
+            b = in.nextInt();
+            qs.add(new Question(q, a, b));
+           // questions[i] = new Question();
         }
-        vikings.SetQs(questions);
+        vikings.SetQuestions(qs);
+
 
         try {
-            VikingsHelper.write(vikings, "viks.xml");
+            VikingsHelper.write(vikings);
         }
         catch(Exception exc)
         {
@@ -61,9 +65,7 @@ public class Main extends Application {
             System.out.print("Ffuuuuu");
         }
 
-        if (v != null)
-           v.GetQs();
-        vikings.GetQs();
+
     }
     }
 

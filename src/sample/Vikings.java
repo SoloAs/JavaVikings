@@ -1,26 +1,35 @@
 package sample;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * Created by Alexander on 9/16/2014.
  */
+@XmlRootElement(name = "quest")
 public class Vikings {
-    private Question[] questions = new Question[2];
+    @XmlElementWrapper(name = "QuestList")
+    @XmlElement(name = "question")
+    private ArrayList<Question> questions;
 
-    public int getQuestionNumber()
+    public Vikings()
     {
-        return questions.length;
+        questions = new ArrayList<Question>();
     }
 
-    public void SetQs(Question[] questions)
-    {
-        this.questions = questions;
-    }
+   public void SetQuestions(ArrayList<Question> qs)
+   {
+       this.questions = qs;
+   }
 
-    public void GetQs()
-    {
-        for(int i = 0; i < questions.length; i++)
-            questions[i].GetAnswer();
-    }
+   public ArrayList<Question> GetQuestions()
+   {
+       return questions;
+   }
+
+
+
 }
