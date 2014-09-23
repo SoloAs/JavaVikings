@@ -7,10 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
  */
 public class Question {
     @XmlElement(name = "question")
+    public String getQuestion() {return question;}
     private String question;
     @XmlElement(name = "YesId")
+    public int getYesId() {return yesId;}
     private int yesId;
     @XmlElement(name = "NoId")
+    public int getNoId() {return noId;}
     private int noId;
 
     public Question()

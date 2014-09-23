@@ -2,14 +2,14 @@
 <quest>
     <QuestList>
         <question>
+            <NoId>2</NoId>
             <question>q</question>
             <YesId>1</YesId>
-            <NoId>2</NoId>
         </question>
         <question>
+            <NoId>1</NoId>
             <question>w</question>
             <YesId>2</YesId>
-            <NoId>1</NoId>
         </question>
     </QuestList>
 </quest>
