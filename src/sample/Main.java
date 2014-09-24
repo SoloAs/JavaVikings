@@ -71,6 +71,34 @@ public class Main extends Application {
             System.out.print("Ffuuuuu");
         }
 
+        int currentId = 0;
+
+        ArrayList<Question> qs = v != null ? v.GetQuestions() : null;
+        String currentAnswer = "";
+
+        while(currentId != 20)
+        {
+
+            System.out.print("\n " + qs.get(currentId).getQuestion());
+            if (qs.get(currentId).getClass() == Block.class)
+                currentId = ((Block)qs.get(currentId)).getNextId();
+            else {
+                System.out.print("\nОтвет: ");
+                currentAnswer = in.next();
+                if (currentAnswer.matches("y|Y|Yes|yes|да|Да"))
+                    currentId = ((IfQuestion)qs.get(currentId)).getYesId();
+                else
+                  if  (currentAnswer.matches("n|N|No|no|нет|Нет"))
+                    currentId = ((IfQuestion)qs.get(currentId)).getNoId();
+                else
+                      System.out.print("Only yes/no");
+
+            }
+
+
+
+
+        }
 
 
     }

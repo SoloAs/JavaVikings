@@ -11,29 +11,36 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(propOrder = {"yesId", "noId"})
 public class IfQuestion extends Question{
 
-    @XmlElement(name = "YesId")
-    public int getYesId() {return yesId;}
-    private int yesId;
-
-    @XmlElement(name = "NoId")
-    public int getNoId() {return noId;}
-    private int noId;
-
     public IfQuestion()
     {
         setQuestion("");
-        yesId = -1;
-        noId = -1;
+        setYesId(-1);// = -1;
+        setNoId(-1);// = -1;
         setId(-1);
     }
 
     public IfQuestion(String q, int y, int n, int i)
     {
         setQuestion(q);
-        yesId = y;
-        noId = n;
+        setYesId(y);//yesId = y;
+        setNoId(n);//noId = n;
         setId(i);
-   //     gotVariants = gv;
+        //     gotVariants = gv;
     }
+
+    private int yesId;
+    @XmlElement(name = "YesId")
+    public int getYesId() { return yesId; }
+    public void setYesId(int value) { this.yesId = value; }
+
+
+
+    private int noId;
+    @XmlElement(name = "NoId")
+    public int getNoId() { return noId; }
+    public void setNoId(int value) { this.noId = value; }
+
+
+
 
 }

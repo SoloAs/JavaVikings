@@ -15,7 +15,7 @@ public class VikingsHelper {
      public static void write(Vikings vikings) {
         try {
             File file = new File("viks.xml");
-            JAXBContext jaxbContext = JAXBContext.newInstance(Vikings.class); //, AbsNode.class, Node.class, IfNode.class, EndingNode.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(Vikings.class);
 
             Marshaller marshaller = jaxbContext.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

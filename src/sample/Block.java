@@ -11,6 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Block extends Question {
     public Block()
     {
+        setQuestion("");
         setId(-1);
         setNextId(-1);
     }
@@ -22,8 +23,9 @@ public class Block extends Question {
         setNextId(j);
     }
 
-  //  @XmlElement(name = "nextId")
+
     private int nextId;
+    @XmlElement(name = "nextId")
     public int getNextId() { return nextId; }
     public void setNextId(int value) { nextId = value; }
 

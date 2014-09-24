@@ -20,13 +20,13 @@
         <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ifQuestion">
             <Id>3</Id>
             <question>Чувствуешь голод?</question>
-            <YesId>5</YesId>
-            <NoId>4</NoId>
+            <YesId>4</YesId>
+            <NoId>5</NoId>
         </question>
         <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
             <Id>4</Id>
-            <question>Прошло 15 минут.</question>
-            <nextId>3</nextId>
+            <question>Поел, прошло полчаса.</question>
+            <nextId>5</nextId>
         </question>
         <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
             <Id>5</Id>
