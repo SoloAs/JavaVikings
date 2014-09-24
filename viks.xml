@@ -1,15 +1,111 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <quest>
     <QuestList>
-        <question>
-            <NoId>2</NoId>
-            <question>q</question>
-            <YesId>1</YesId>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>0</Id>
+            <question>Ты просыпаешься на костях поверженных врагов.</question>
+            <nextId>1</nextId>
         </question>
-        <question>
-            <NoId>1</NoId>
-            <question>w</question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ifQuestion">
+            <Id>1</Id>
+            <question>Поискать секиру?</question>
             <YesId>2</YesId>
+            <NoId>3</NoId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>2</Id>
+            <question>Ты вынимаешь секиру из близлежащего бездыханного тела.</question>
+            <nextId>3</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ifQuestion">
+            <Id>3</Id>
+            <question>Чувствуешь голод?</question>
+            <YesId>5</YesId>
+            <NoId>4</NoId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>4</Id>
+            <question>Прошло 15 минут.</question>
+            <nextId>3</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>5</Id>
+            <question>Собираешь боевой отряд, прказываешь им грузиться на ладьи.</question>
+            <nextId>6</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ifQuestion">
+            <Id>6</Id>
+            <question>Плыть в Англию?</question>
+            <YesId>8</YesId>
+            <NoId>7</NoId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>7</Id>
+            <question>Извини, но можно только в Англию.</question>
+            <nextId>6</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>8</Id>
+            <question>По пути ты решаешь откупорить пару бочонков эля. Пьешь и горланишь задушевные песни.</question>
+            <nextId>9</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ifQuestion">
+            <Id>9</Id>
+            <question>Выпить еще эля?</question>
+            <YesId>10</YesId>
+            <NoId>11</NoId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>10</Id>
+            <question>Напившись до потери пульса, выруливаешь корабль в неверном направлении и разбиваешься о скалы.</question>
+            <nextId>19</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>11</Id>
+            <question>Ты высаживаешься на побережье Англии.</question>
+            <nextId>12</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>12</Id>
+            <question>Сплошная рутина: убиваешь, грабишь, рушишь, поджигаешь и связываешь женщин, насилуешь мужчин. Или наоборот. Да, точно наоборот..</question>
+            <nextId>13</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ifQuestion">
+            <Id>13</Id>
+            <question>Еще?</question>
+            <YesId>12</YesId>
+            <NoId>14</NoId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>14</Id>
+            <question>Вместе с командой складываете награбленное в трюм.</question>
+            <nextId>15</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>15</Id>
+            <question>Едва вернувшись домой, приказываешь устроить пир в честь похода.</question>
+            <nextId>16</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>16</Id>
+            <question>А после просыпаешься и осознаешь, что ты - менеджер среднего звена.</question>
+            <nextId>17</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ifQuestion">
+            <Id>17</Id>
+            <question>Вздремнуть еще часок?</question>
+            <YesId>0</YesId>
+            <NoId>18</NoId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>18</Id>
+            <question>Идешь работать, жизнь снова сера и уныла. Конец.</question>
+            <nextId>19</nextId>
+        </question>
+        <question xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="block">
+            <Id>19</Id>
+            <question>Такие дела</question>
+            <nextId>20</nextId>
         </question>
     </QuestList>
 </quest>

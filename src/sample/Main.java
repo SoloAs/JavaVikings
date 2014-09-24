@@ -16,6 +16,7 @@ import java.beans.XMLEncoder;
 
 public class Main extends Application {
 
+    private final int qnum = 19;
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -29,22 +30,27 @@ public class Main extends Application {
         launch(args);
     }
     {
-       Vikings vikings = new Vikings();
+       //ikings vikings = new Vikings();
 
         Scanner in = new Scanner(System.in);
 
-        ArrayList<Question> qs = new ArrayList<Question>();
-        for(int i = 0; i < 2; i++)
+       /* ArrayList<Question> qs = new ArrayList<Question>();
+        int y = -1; int n = -1; String q = "";
+        for(int i = 0; i <= qnum; i++)
         {
-            int a = -1; int b = -1; String q = "";
-            System.out.println("Question: ");
-            q = in.next();
-            System.out.println("Answer1: ");
-            a = in.nextInt();
-            System.out.println("Answer2: ");
-            b = in.nextInt();
-            qs.add(new Question(q, a, b));
-           // questions[i] = new Question();
+            System.out.print("Question: ");
+            q = in.nextLine();
+            if (q.charAt(q.length() - 1) != '?')
+              qs.add(new Block(q, i, i+1));
+            else
+            {
+                System.out.println("Yes id: ");
+                y = in.nextInt();
+                System.out.println("No id: ");
+                n = in.nextInt();
+                qs.add(new IfQuestion(q, y, n, i));
+                q = in.nextLine();
+            }
         }
         vikings.SetQuestions(qs);
 
@@ -56,7 +62,7 @@ public class Main extends Application {
         {
             System.out.print("Ffuuuuu");
         }
-
+*/
         Vikings v = null;
         try {
            v = VikingsHelper.read("viks.xml");
@@ -64,6 +70,7 @@ public class Main extends Application {
         catch(Exception exc) {
             System.out.print("Ffuuuuu");
         }
+
 
 
     }
