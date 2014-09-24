@@ -4,6 +4,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
+ * Элемент квеста без вариантов ответа.
+ *
  * Created by Alexander on 9/24/2014.
  */
 

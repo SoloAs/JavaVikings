@@ -9,6 +9,9 @@ import java.beans.XMLEncoder;
 import java.io.*;
 
 /**
+ *
+ * Считывание, запись xml.
+ *
  * Created by Alexander on 9/16/2014.
  */
 public class VikingsHelper {

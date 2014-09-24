@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ *
+ * Квест
+ *
  * Created by Alexander on 9/16/2014.
  */
 @XmlRootElement(name = "quest")

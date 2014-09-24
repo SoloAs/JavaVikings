@@ -6,6 +6,9 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
 
 /**
+ *
+ * Интерфейс элементов квеста
+ *
  * Created by Alexander on 9/24/2014.
  */
 

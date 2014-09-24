@@ -5,6 +5,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
+ * Элемент квеста с вариантами ответа
+ *
  * Created by Alexander on 9/16/2014.
  */
 @XmlRootElement(name = "IfQuestion")

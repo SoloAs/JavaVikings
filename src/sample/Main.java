@@ -16,13 +16,15 @@ import java.beans.XMLEncoder;
 
 public class Main extends Application {
 
-    private final int qnum = 19;
+    private final int QNUM = 19;
+    private final int LAST_QUESTION_NUMBER = 20;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
-        primaryStage.show();
+     //   primaryStage.show();
     }
 
 
@@ -76,7 +78,7 @@ public class Main extends Application {
         ArrayList<Question> qs = v != null ? v.GetQuestions() : null;
         String currentAnswer = "";
 
-        while(currentId != 20)
+        while(currentId != LAST_QUESTION_NUMBER)
         {
 
             System.out.print("\n " + qs.get(currentId).getQuestion());
